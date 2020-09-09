@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#45aaf2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Escolha um modo de jogo:"
+                android:gravity="center"
+                android:fontFamily="casual"
+                android:textColor="#000"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp">
+
+                <FrameLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="#fff"
+                    android:id="@+id/games">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Música de Games"
+                        android:gravity="center"
+                        android:fontFamily="casual"
+                        android:textColor="#000"/>
+                    <!--ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/games_1"/!-->
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="#fff"
+                    android:layout_toRightOf="@id/games"
+                    android:layout_marginLeft="50dp"
+                    android:id="@+id/lol">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fala dos campeõpes League of Legends"
+                        android:gravity="center"
+                        android:fontFamily="casual"
+                        android:textColor="#000"/>
+                    <!--ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/lol"/!-->
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="#fff"
+                    android:id="@+id/filmes"
+                    android:layout_marginTop="160dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Músicas de Filmes"
+                        android:gravity="center"
+                        android:fontFamily="casual"
+                        android:textColor="#000"/>
+                    <!--ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/filme"/!-->
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="#fff"
+                    android:layout_toRightOf="@id/filmes"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="160dp"
+                    android:id="@+id/series">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Músicas de Series"
+                        android:gravity="center"
+                        android:fontFamily="casual"
+                        android:textColor="#000"/>
+                    <!--ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/serie"/!-->
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="#fff"
+                    android:id="@+id/animacao"
+                    android:layout_marginTop="320dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Músicas de Animações"
+                        android:gravity="center"
+                        android:fontFamily="casual"
+                        android:textColor="#000"/>
+                    <!--ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/desenhos"/!-->
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="#fff"
+                    android:id="@+id/animes"
+                    android:layout_toRightOf="@id/animacao"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="320dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Músicas de Anime"
+                        android:gravity="center"
+                        android:fontFamily="casual"
+                        android:textColor="#000"/>
+                    <!--ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/animes"/!-->
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="#fff"
+                    android:id="@+id/nacionais"
+                    android:layout_marginTop="480dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Músicas Nacionais"
+                        android:gravity="center"
+                        android:fontFamily="casual"
+                        android:textColor="#000"/>
+                    <!--ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/musicas"/!-->
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="#fff"
+                    android:id="@+id/internacionais"
+                    android:layout_toRightOf="@id/animacao"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="480dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Músicas Internacionais"
+                        android:gravity="center"
+                        android:fontFamily="casual"
+                        android:textColor="#000"/>
+                    <!--ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/musicas"/!-->
+                </FrameLayout>
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

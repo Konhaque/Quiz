@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="#182C61">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/beta_branco"
+                android:layout_marginTop="30dp"/>
+            <TextView
+                android:id="@+id/lbl_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Você fez 0 pontos"
+                android:textColor="#fff"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:textSize="30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Obrigado por jogar, não esqueça de ver a sua posição no nosso ranking. Até breve!"
+                android:gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="casual"
+                android:textSize="20dp"
+                android:textColor="#fff"/>
+            <Button
+                android:id="@+id/ir_a_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_style"
+                android:layout_marginTop="20dp"
+                android:text="Ir ao Ranking"
+                android:fontFamily="serif"
+                android:textColor="#000"/>
+            <Button
+                android:id="@+id/jogar_novamente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_style"
+                android:layout_marginTop="10dp"
+                android:text="Jogar Novamente"
+                android:fontFamily="serif"
+                android:textColor="#000"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

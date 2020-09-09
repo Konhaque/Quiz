@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "305195034345",
+    "firebase_url": "https://quiz-musical-a6251.firebaseio.com",
+    "project_id": "quiz-musical-a6251",
+    "storage_bucket": "quiz-musical-a6251.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:305195034345:android:838161de8a739f9560f278",
+        "android_client_info": {
+          "package_name": "com.projetobeta.quizmusical"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "305195034345-oq1lk0k40sk5j7i9e62sr0n9nl6cera7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.projetobeta.quizmusical",
+            "certificate_hash": "c6c85c9225384d51613ead4b04b58ceaee067c16"
+          }
+        },
+        {
+          "client_id": "305195034345-fboo6kt0lb3vrqbftqgdcn0e0a7k6ju2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx7cYhqY_CHILYc_hoX4Af_ealzlu5RRQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "305195034345-fboo6kt0lb3vrqbftqgdcn0e0a7k6ju2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/jogar"
+        android:title="Jogar"
+        android:icon="@drawable/ic_baseline_videogame_asset_24"/>
+    <item
+        android:id="@+id/ranking"
+        android:title="Ranking"
+        android:icon="@drawable/ranking"
+        />
+    <item
+        android:id="@+id/rede_social"
+        android:icon="@drawable/share"
+        android:title="Rede Social"/>
+
+</menu>

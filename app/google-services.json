@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "305195034345-oq1lk0k40sk5j7i9e62sr0n9nl6cera7.apps.googleusercontent.com",
+          "client_id": "305195034345-q45snriab4g0omnqdjaq9b7gv4t2onae.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.projetobeta.quizmusical",
-            "certificate_hash": "c6c85c9225384d51613ead4b04b58ceaee067c16"
+            "certificate_hash": "cc8503398c44e282cbdb96aaeed54b39b42c999b"
           }
         },
         {

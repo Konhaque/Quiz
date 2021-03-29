@@ -14,6 +14,7 @@ import com.projetobeta.quizmusical.R;
 
 public class Escolhe_Jogo extends Fragment {
     private FrameLayout games;
+    private FrameLayout cenas;
 
     @Nullable
     @Override
@@ -31,6 +32,7 @@ public class Escolhe_Jogo extends Fragment {
 
     private void iniciar_Objetos(){
         games = (FrameLayout) getActivity().findViewById(R.id.games);
+        cenas = (FrameLayout) getActivity().findViewById(R.id.video_filme);
     }
 
     private void click_Games(){
@@ -41,6 +43,13 @@ public class Escolhe_Jogo extends Fragment {
                 Bundle args = new Bundle();
                 args.putString("tipo","Games");
                 fragment.setArguments(args);
+                abre_Tela(fragment);
+            }
+        });
+        cenas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fragment = new Jogar_Video();
                 abre_Tela(fragment);
             }
         });

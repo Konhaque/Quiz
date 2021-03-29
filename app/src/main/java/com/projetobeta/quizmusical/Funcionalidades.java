@@ -9,6 +9,7 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.projetobeta.quizmusical.funcionalidades.Escolhe_Jogo;
+import com.projetobeta.quizmusical.funcionalidades.ModoDeJogo;
 import com.projetobeta.quizmusical.funcionalidades.Ranking;
 import com.projetobeta.quizmusical.generalfunctions.Fullscreen;
 
@@ -20,7 +21,7 @@ public class Funcionalidades extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()){
                 case R.id.jogar:
-                abre_Tela(new Escolhe_Jogo());
+                abre_Tela(new ModoDeJogo());
                 return true;
                 case R.id.ranking:
                  abre_Tela(new Ranking());

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#45aaf2"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="Nome da sala"
+        android:id="@+id/nome_sala"
+        android:fontFamily="@font/endgame"
+        android:gravity="center"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/jogador1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jogador 1:"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"
+        android:fontFamily="@font/endgame"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/jogador2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jogador 2:"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"
+        android:fontFamily="@font/endgame"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/jogar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_style"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Jogar!"
+        android:fontFamily="@font/endgame"
+        android:textSize="25dp"/>
+
+</LinearLayout>

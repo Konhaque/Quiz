@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#45aaf2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Criar Sala"
+                android:fontFamily="@font/endgame"
+                android:textColor="#000"
+                android:textSize="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/btn_style">
+                <EditText
+                    android:id="@+id/nome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Digite o nome da sala*"
+                    android:textColorHint="#000"
+                    android:fontFamily="@font/endgame"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+                <EditText
+                    android:id="@+id/senha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:hint="Digite uma senha"
+                    android:inputType="textPassword"
+                    android:textColorHint="#000"
+                    android:fontFamily="@font/endgame"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+                <Spinner
+                    android:id="@+id/spineer"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginBottom="70dp"/>
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/criarSala"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/container"
+                android:layout_marginTop="-40dp"
+                android:text="Criar Sala"
+                android:textSize="20dp"
+                android:fontFamily="@font/endgame"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

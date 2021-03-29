@@ -12,15 +12,18 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:src="@drawable/beta_branco"
+        android:layout_height="350dp"
+        android:src="@drawable/logo"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"/>
     <ProgressBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@android:style/Widget.Holo.Light.ProgressBar.Large"
-        android:layout_marginTop="-30dp"/>
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        />
 
 
 

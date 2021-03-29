@@ -116,4 +116,11 @@ public class Repository {
         return usuario;
     }
 
+    public String getIdUser(){
+        String sql = "SELECT * FROM TB_USER";
+        Cursor cursor = databaseutil.getConexaoDataBase().rawQuery(sql,null);
+        cursor.moveToFirst();
+        return cursor.getString(cursor.getColumnIndex("ID_USER"));
+    }
+
 }

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#45aaf2"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Escolha um modo de jogo:"
+                android:gravity="center"
+                android:fontFamily="casual"
+                android:textColor="#000"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+         <FrameLayout
+             android:id="@+id/salas_criadas"
+             android:layout_width="match_parent"
+             android:background="@drawable/btn_style"
+             android:layout_marginTop="20dp"
+             android:layout_marginLeft="20dp"
+             android:layout_marginRight="20dp"
+             android:layout_height="wrap_content">
+             <ImageView
+                 android:layout_width="50dp"
+                 android:layout_height="50dp"
+                 android:src="@drawable/ic_baseline_person_24"
+                 app:tint="#000"/>
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:text="Salas Criadas"
+                 android:fontFamily="@font/endgame"
+                 android:textSize="20dp"
+                 android:textColor="#000"
+                 android:layout_marginLeft="40dp"
+                 android:layout_marginRight="20dp"/>
+         </FrameLayout>
+            <FrameLayout
+                android:id="@+id/criar_sala"
+                android:layout_width="match_parent"
+                android:background="@drawable/btn_style"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_baseline_videogame_asset_24"
+                    app:tint="#000"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Criar Sala"
+                    android:fontFamily="@font/endgame"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="20dp"/>
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

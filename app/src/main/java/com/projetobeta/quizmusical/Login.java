@@ -194,6 +194,8 @@ public class Login extends AppCompatActivity {
         logar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*startActivity(new Intent(Login.this,Funcionalidades.class));
+                finish();*/
                 AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
                 LayoutInflater layoutInflater = getLayoutInflater();
                 builder.setView(layoutInflater.inflate(R.layout.activity_main,null));

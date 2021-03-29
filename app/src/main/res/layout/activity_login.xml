@@ -20,7 +20,7 @@
                 android:id="@+id/logo"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:src="@drawable/beta_branco"
+                android:src="@drawable/logo"
                 android:layout_marginTop="40dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"/>
@@ -95,8 +95,11 @@
                 android:text="Registrar-se"
                 android:gravity="center"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:textStyle="bold"
                 android:fontFamily="casual"
                 android:textColor="#000"
+                android:textSize="15dp"
                 android:id="@+id/registrar"/>
 
         </LinearLayout>

@@ -16,14 +16,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.GenericTypeIndicator;
 import com.google.firebase.database.ValueEventListener;
 import com.projetobeta.quizmusical.R;
 import com.projetobeta.quizmusical.bd.Musicas;
 import com.projetobeta.quizmusical.bd.Repository;
+import com.projetobeta.quizmusical.generalfunctions.GeneralFunctions;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -59,7 +62,7 @@ public class Jogar extends Fragment {
     @Override
     public void onStart() {
         iniciar_Objetos();
-        setLbl_jogo();
+        //setLbl_jogo();
         setPontos();
         pegar_Musica();
         opcoes();
@@ -77,19 +80,44 @@ public class Jogar extends Fragment {
         args = getArguments();
         new Repository(getContext()).criar_Musicas();
         musicas = new Musicas();
+        musica = 0;
         musicas_jogadas = new ArrayList<>();
         random = new Random();
     }
 
-    private void setLbl_jogo(){
+    /*private void setLbl_jogo(){
         if(args.getString("tipo").equalsIgnoreCase("games")) lbl_jogo.setText("De que game é esta música?");
-    }
+    }*/
 
     private void setPontos(){
         pontos.setText("Pontos: "+pontuacao);
     }
 
     private void pegar_Musica(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        LayoutInflater inflater = getLayoutInflater();
+        builder.setView(inflater.inflate(R.layout.activity_main,null));
+        builder.setCancelable(true);
+        dialog = builder.create();
+        dialog.show();
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Salas/"+args.getString("id"));
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                GenericTypeIndicator<List<Musicas>> genericTypeIndicator = new GenericTypeIndicator<List<Musicas>>() {
+                };
+                musicas_jogadas = snapshot.child("Musicas").getValue(genericTypeIndicator);
+                setMusica();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+    /*private void pegar_Musica(){
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         LayoutInflater inflater = getLayoutInflater();
         builder.setView(inflater.inflate(R.layout.activity_main,null));
@@ -120,11 +148,11 @@ public class Jogar extends Fragment {
             }
         });
 
-    }
+    }*/
 
     private void setMusica(){
-        musicas_jogadas = new Repository(getContext()).getMusicas();
-        musica = random.nextInt(musicas_jogadas.size());
+        //musicas_jogadas = new Repository(getContext()).getMusicas();
+        //musica = random.nextInt(musicas_jogadas.size());
         op_1.setText(musicas_jogadas.get(musica).getOp_1());
         op_2.setText(musicas_jogadas.get(musica).getOp_2());
         op_3.setText(musicas_jogadas.get(musica).getOp_3());
@@ -161,8 +189,14 @@ public class Jogar extends Fragment {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            dialog.dismiss();
-                            setMusica();
+                            if((musica+1) < musicas_jogadas.size()){
+                                musica++;
+                                dialog.dismiss();
+                                setMusica();
+                            }else{
+                                setFim();
+                                dialog.dismiss();
+                            }
                         }
                     },2000);
                 }else{
@@ -176,12 +210,15 @@ public class Jogar extends Fragment {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            Fragment fragment = new Fim_de_Jogo();
-                            Bundle args = new Bundle();
-                            args.putString("pontos",pontuacao+"");
-                            fragment.setArguments(args);
-                            abre_Tela(fragment);
-                            dialog.dismiss();
+                            if((musica+1) < musicas_jogadas.size()){
+                                musica++;
+                                dialog.dismiss();
+                                setMusica();
+                            }else{
+                               setFim();
+                                dialog.dismiss();
+                            }
+
                         }
                     },2000);
                 }
@@ -205,8 +242,14 @@ public class Jogar extends Fragment {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            dialog.dismiss();
-                            setMusica();
+                            if((musica+1) < musicas_jogadas.size()){
+                                musica++;
+                                dialog.dismiss();
+                                setMusica();
+                            }else{
+                               setFim();
+                                dialog.dismiss();
+                            }
                         }
                     },2000);
                 }else{
@@ -220,12 +263,14 @@ public class Jogar extends Fragment {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            Fragment fragment = new Fim_de_Jogo();
-                            Bundle args = new Bundle();
-                            args.putString("pontos",pontuacao+"");
-                            fragment.setArguments(args);
-                            abre_Tela(fragment);
-                            dialog.dismiss();
+                            if((musica+1) < musicas_jogadas.size()){
+                                musica++;
+                                dialog.dismiss();
+                                setMusica();
+                            }else{
+                                setFim();
+                                dialog.dismiss();
+                            }
                         }
                     },2000);
                 }
@@ -249,8 +294,14 @@ public class Jogar extends Fragment {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            dialog.dismiss();
-                            setMusica();
+                            if((musica+1) < musicas_jogadas.size()){
+                                musica++;
+                                dialog.dismiss();
+                                setMusica();
+                            }else{
+                               setFim();
+                                dialog.dismiss();
+                            }
                         }
                     },2000);
                 }else{
@@ -264,12 +315,14 @@ public class Jogar extends Fragment {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            Fragment fragment = new Fim_de_Jogo();
-                            Bundle args = new Bundle();
-                            args.putString("pontos",pontuacao+"");
-                            fragment.setArguments(args);
-                            abre_Tela(fragment);
-                            dialog.dismiss();
+                            if((musica+1) < musicas_jogadas.size()){
+                                musica++;
+                                dialog.dismiss();
+                                setMusica();
+                            }else{
+                                setFim();
+                                dialog.dismiss();
+                            }
                         }
                     },2000);
                 }
@@ -293,8 +346,14 @@ public class Jogar extends Fragment {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            dialog.dismiss();
-                            setMusica();
+                            if((musica+1) < musicas_jogadas.size()){
+                                musica++;
+                                dialog.dismiss();
+                                setMusica();
+                            }else{
+                                setFim();
+                                dialog.dismiss();
+                            }
                         }
                     },2000);
                 }else{
@@ -308,15 +367,66 @@ public class Jogar extends Fragment {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            Fragment fragment = new Fim_de_Jogo();
-                            Bundle args = new Bundle();
-                            args.putString("pontos",pontuacao+"");
-                            fragment.setArguments(args);
-                            abre_Tela(fragment);
-                            dialog.dismiss();
+                            if((musica+1) < musicas_jogadas.size()){
+                                musica++;
+                                dialog.dismiss();
+                                setMusica();
+                            }else{
+                                setFim();
+                                dialog.dismiss();
+                            }
                         }
                     },2000);
                 }
+            }
+        });
+    }
+
+    private void setFim(){
+        final DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Salas/"+args.getString("id"));
+        databaseReference.child("jogador1ok").setValue(null);
+        databaseReference.child("jogador2ok").setValue(null);
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.child("idUser1").getValue().toString().equals(new Repository(getContext()).getIdUser())){
+                    databaseReference.child("jogador1fim").setValue(true).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            databaseReference.child("pontosJogador1").setValue(pontuacao).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    Fragment fragment = new Fim_de_Jogo();
+                                    Bundle bundle = new Bundle();
+                                    bundle.putString("id",args.getString("id"));
+                                    fragment.setArguments(bundle);
+                                    new GeneralFunctions().abreTela(getActivity().getSupportFragmentManager(),fragment,R.id.settela);
+                                }
+                            });
+                        }
+                    });
+                }else {
+                    databaseReference.child("jogador2fim").setValue(true).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            databaseReference.child("pontosJogador2").setValue(pontuacao).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    Fragment fragment = new Fim_de_Jogo();
+                                    Bundle bundle = new Bundle();
+                                    bundle.putString("id",args.getString("id"));
+                                    fragment.setArguments(bundle);
+                                    new GeneralFunctions().abreTela(getActivity().getSupportFragmentManager(),fragment,R.id.settela);
+                                }
+                            });
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
     }

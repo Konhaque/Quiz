@@ -10,8 +10,8 @@
         android:icon="@drawable/ranking"
         />
     <item
-        android:id="@+id/rede_social"
-        android:icon="@drawable/share"
-        android:title="Rede Social"/>
+        android:id="@+id/perfil"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Perfil"/>
 
 </menu>
